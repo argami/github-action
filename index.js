@@ -700,6 +700,7 @@ const runTests = async () => {
     }
     // we still set the output explicitly
     core.setOutput('dashboardUrl', dashboardUrl)
+    core.setOutput('testResults', testResults)
 
     if (testResults.totalFailed) {
       return Promise.reject(

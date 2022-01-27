@@ -35,6 +35,7 @@ jobs:
         run: |
           echo Cypress finished with: ${{ steps.cypress.outcome }}
           echo See results at ${{ steps.cypress.outputs.dashboardUrl }}
+          echo See results at ${{ steps.cypress.outputs.testResults }}
 
   group:
     runs-on: ubuntu-20.04
