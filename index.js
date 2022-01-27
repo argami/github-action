@@ -699,8 +699,9 @@ const runTests = async () => {
       debug('There is no Dashboard url')
     }
     // we still set the output explicitly
+    console.log(testResults)
     core.setOutput('dashboardUrl', dashboardUrl)
-    core.setOutput('testResults', testResults)
+    core.setOutput('testResults', JSON.stringify(testResults))
 
     if (testResults.totalFailed) {
       return Promise.reject(
